@@ -37,7 +37,7 @@ console.log(myName('karIna'));
 // Function 5
 
 const randomNumber = function (min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max - min +1) + min);
 }
 
 console.log(randomNumber(1, 10))
