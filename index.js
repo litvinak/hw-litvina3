@@ -13,17 +13,17 @@ function maxNumber(number) {
 
 //  Function 2
 
-const myFuncDeg = function degreeFunc(a, b) {
+function degreeFunc(a, b) {
     let result = a;
 
     for(let i = 1; i < b; i++) {
         result *= a;
-    
-    return result;   
+       
     }
+    return result;
 }
 
-console.log(myFuncDeg(1,29));
+console.log(degreeFunc(1,29));
 
 
 // Function 3
@@ -46,11 +46,22 @@ console.log(randomNumber(1, 10))
 // Function 6
 
 
-const count = function (str, sym) {
-    return sym.split(str).length-1
+function countLetter(letter, word) {
+    let counter = 0;
+    const res = word.toLowerCase();
+    
+    for (let i = 0; i < res.length; i++) {
+        if (res[i] === letter) {
+            counter += 1; 
+        }
+        
+
+    }
+
+    return counter;
 }
 
-console.log(count("a", "abrakadabra"));
+console.log(countLetter("a", "karina"));
 
 
 
@@ -61,7 +72,7 @@ console.log(count("a", "abrakadabra"));
 
 document.writeln(`<ul>
                     <li>Функція №1: ${maxNumber(4567)}</li>
-                    <li>Функція №2: ${myFuncDeg(1,29)}</li>
+                    <li>Функція №2: ${degreeFunc(1,29)}</li>
                     <li>Функція №3: ${myName('karIna')}</li>
                     <li>Функція №5: ${randomNumber(1, 10)}</li>
-                    <li>Функція №6: ${count("a", "abrakadabra")}</li>`)
+                    <li>Функція №6: ${countLetter("a", "karina")}</li>`)
